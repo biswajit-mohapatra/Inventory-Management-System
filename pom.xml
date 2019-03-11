@@ -46,6 +46,11 @@
 		<artifactId>springfox-swagger-ui</artifactId>
 		<version>2.9.2</version>
 	</dependency>
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+	    <version>1.4.0.RELEASE</version>
+	</dependency>
    </dependencies>
 <build>
  	<finalName>inventoryManagementService</finalName>
