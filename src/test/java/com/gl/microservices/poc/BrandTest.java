@@ -3,6 +3,7 @@ package com.gl.microservices.poc;
 import java.util.Date;
 import java.util.List;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,23 +20,24 @@ public class BrandTest {
 @Autowired
 BrandRepository brandRepository;
 	
-//@Test
+@Test
 public void createBrandTest(){
 	Brand brand = new Brand();
-	brand.setName("Nike");
+	brand.setName("Nike123");
 	brand.setPublicEmail("brand@nike.com");
 	brand.setPublicePhone("8800755977");
 	brand.setCreatedDate(new Date());
 	brand.setUpdateDate(new Date());
 	brandRepository.save(brand);
+	Assert.assertNotNull(brand.getId());
 }
 
 @Test
 public void getBrandsTest(){
 	
 	List<Brand> brands= brandRepository.findAll();
-	System.out.println("Brands >>>>>"+brands);
+	Assert.assertNotNull(brands);
+	Assert.assertTrue(brands.size() > 0);
 }
-		
 
 }
