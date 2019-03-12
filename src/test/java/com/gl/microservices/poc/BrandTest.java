@@ -22,7 +22,7 @@ public class BrandTest {
   @Autowired
   BrandService brandService;
 
-  // @Test
+  @Test
   public void createBrandTest() {
     Brand brand = new Brand();
     brand.setName("Nike123");
@@ -34,7 +34,7 @@ public class BrandTest {
     Assert.assertNotNull(brand.getId());
   }
 
-  // @Test
+  @Test
   public void getBrandsTest() {
 
     List<Brand> brands = brandRepository.findAll();
