@@ -51,6 +51,15 @@
 	    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 	    <version>1.4.0.RELEASE</version>
 	</dependency>
+	<!-- Caching -->
+	<dependency>
+   		<groupId>com.hazelcast</groupId>
+    	<artifactId>hazelcast</artifactId>
+	</dependency>
+	<dependency>
+        <groupId>com.hazelcast</groupId>
+        <artifactId>hazelcast-spring</artifactId>
+   </dependency>
    </dependencies>
 <build>
  	<finalName>inventoryManagementService</finalName>
